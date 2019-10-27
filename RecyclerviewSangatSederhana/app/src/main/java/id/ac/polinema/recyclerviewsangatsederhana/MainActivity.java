@@ -6,14 +6,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.os.Bundle;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import id.ac.polinema.recyclerviewsangatsederhana.adapters.SuperHeroAdapter;
 import id.ac.polinema.recyclerviewsangatsederhana.models.SuperHero;
-
 public class MainActivity extends AppCompatActivity {
-
     //instansiasi Recyclerview
     RecyclerView rvSuperHero;
     //instansiasi list superhero
@@ -25,11 +29,11 @@ public class MainActivity extends AppCompatActivity {
         //menyambungkan rvSuperHero ke layout
         rvSuperHero = findViewById(R.id.rvSuperHero);
         //Membuat object hero
-        SuperHero hero = new SuperHero("Petruk");
+        SuperHero hero = new SuperHero("Petruk",R.drawable.petruk);
         //menambahkan hero ke listSuperHero
         listSuperHero.add(hero);
         //membuat object hero baru
-        hero = new SuperHero("Gareng");
+        hero  = new SuperHero("Gareng",R.drawable.gareng);
         //menambahkan hero baru ke listSuperhero
         listSuperHero.add(hero);
         //Instansiasi Adapter
